@@ -1,0 +1,25 @@
+# Maven
+backend/target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+*.env
+
+# Local configuration
+application-local.properties
+
+# Node
+node_modules/
