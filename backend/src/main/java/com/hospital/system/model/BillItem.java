@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.math.*; public class BillItem { public Long billItemId; public Long billId; public Long serviceId; public String serviceName; public Integer quantity; public BigDecimal unitPrice; public BigDecimal amount; }

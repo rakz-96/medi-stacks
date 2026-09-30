@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.time.*; public class Patient { public Long patientId; public String fullName; public LocalDate dateOfBirth; public String gender; public String phone; public String email; public String address; public LocalDateTime createdAt; }

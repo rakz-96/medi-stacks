@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.time.*; public class Appointment { public Long appointmentId; public Long patientId; public Long doctorId; public String patientName; public String doctorName; public String departmentName; public LocalDate appointmentDate; public LocalTime appointmentTime; public String reason; public String status; public LocalDateTime createdAt; }

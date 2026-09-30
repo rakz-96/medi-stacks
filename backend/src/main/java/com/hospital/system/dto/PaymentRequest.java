@@ -1,0 +1,1 @@
+package com.hospital.system.dto; import jakarta.validation.constraints.*; import java.math.*; public class PaymentRequest { @NotNull @Positive public BigDecimal amount; @NotBlank public String paymentMethod; public String referenceNo; }

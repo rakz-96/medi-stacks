@@ -1,0 +1,1 @@
+package com.hospital.system.controller; import com.hospital.system.service.ReportService; import org.springframework.web.bind.annotation.*; @RestController @RequestMapping("/api/dashboard") public class DashboardController {private final ReportService s; public DashboardController(ReportService s){this.s=s;} @GetMapping public Object dashboard(){return s.dashboard();} }

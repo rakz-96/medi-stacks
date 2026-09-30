@@ -1,0 +1,1 @@
+package com.hospital.system.exception; import org.springframework.http.*; public class ApiException extends RuntimeException { private final HttpStatus status; public ApiException(HttpStatus s,String m){super(m);status=s;} public HttpStatus getStatus(){return status;} }

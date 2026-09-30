@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.math.*; import java.time.*; public class Doctor { public Long doctorId; public String fullName; public String specialization; public Long departmentId; public String departmentName; public String phone; public BigDecimal consultationFee; public LocalTime availableFrom; public LocalTime availableTo; }

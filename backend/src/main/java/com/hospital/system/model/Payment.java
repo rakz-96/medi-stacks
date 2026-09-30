@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.math.*; import java.time.*; public class Payment { public Long paymentId; public Long billId; public LocalDateTime paymentDate; public BigDecimal amount; public String paymentMethod; public String referenceNo; }

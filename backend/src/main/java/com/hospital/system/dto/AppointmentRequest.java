@@ -1,0 +1,1 @@
+package com.hospital.system.dto; import jakarta.validation.constraints.*; import java.time.*; public class AppointmentRequest { @NotNull public Long patientId; @NotNull public Long doctorId; @NotNull public LocalDate appointmentDate; @NotNull public LocalTime appointmentTime; @Size(max=500) public String reason; }

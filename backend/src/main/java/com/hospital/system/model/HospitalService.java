@@ -1,0 +1,1 @@
+package com.hospital.system.model; import java.math.*; public class HospitalService { public Long serviceId; public String serviceName; public String description; public BigDecimal price; public Boolean active; }
