@@ -1,4 +1,4 @@
-const API_BASE='http://localhost:8081/api';
+const API_BASE='https://medi-stacks-production.up.railway.app/api';
 async function api(path,options={}){const opts={...options,headers:{'Content-Type':'application/json',...(options.headers||{})}};const res=await fetch(API_BASE+path,opts);let data=null;try{data=await res.json()}catch{}if(!res.ok){throw new Error(data?.message||`Request failed (${res.status})`)}return data}
 const $=(s,p=document)=>p.querySelector(s); const $$=(s,p=document)=>[...p.querySelectorAll(s)];
 function showMsg(msg,type='ok'){let e=$('#msg');if(!e)return;e.textContent=msg;e.className='alert show '+type;setTimeout(()=>e.className='alert',3500)}
