@@ -1,0 +1,7 @@
+flowchart TB
+ Browser[Browser / Vanilla JS] --> REST[Spring Web REST Controllers]
+ REST --> SVC[Business Service Layer]
+ SVC --> JDBC[Repository Layer / JdbcTemplate]
+ JDBC --> MYSQL[(MySQL 8.x)]
+ REST -. validation/errors .-> EX[Global Exception Handler]
+ SVC -. transactions .-> TX[Spring @Transactional]

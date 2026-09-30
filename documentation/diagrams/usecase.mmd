@@ -1,0 +1,11 @@
+flowchart LR
+ U[Hospital Staff] --> P[Manage Patients]
+ U --> D[Manage Doctors/Departments]
+ U --> A[Book / Update Appointments]
+ U --> S[Manage Services]
+ U --> B[Create Bills and Bill Items]
+ U --> PY[Record Payments]
+ U --> R[View Reports]
+ B --> C[Database Calculations]
+ PY --> C
+ A --> C

@@ -1,0 +1,7 @@
+const API_BASE='http://localhost:8081/api';
+async function api(path,options={}){const opts={...options,headers:{'Content-Type':'application/json',...(options.headers||{})}};const res=await fetch(API_BASE+path,opts);let data=null;try{data=await res.json()}catch{}if(!res.ok){throw new Error(data?.message||`Request failed (${res.status})`)}return data}
+const $=(s,p=document)=>p.querySelector(s); const $$=(s,p=document)=>[...p.querySelectorAll(s)];
+function showMsg(msg,type='ok'){let e=$('#msg');if(!e)return;e.textContent=msg;e.className='alert show '+type;setTimeout(()=>e.className='alert',3500)}
+function esc(v){return String(v??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function nav(){const file=location.pathname.split('/').pop()||'index.html';$$('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===file))}
+function shell(title,body){return `<div class="app"><aside class="sidebar"><div class="brand">🏥 MediCare DBMS</div><nav class="nav"><a href="dashboard.html">Dashboard</a><a href="patients.html">Patients</a><a href="doctors.html">Doctors</a><a href="departments.html">Departments</a><a href="appointments.html">Appointments</a><a href="services.html">Services</a><a href="billing.html">Billing</a><a href="payments.html">Payments</a><a href="reports.html">Reports</a><a href="login.html">Logout</a></nav></aside><main class="main"><div class="top"><h1>${title}</h1><span class="muted">Hospital Appointment & Billing</span></div><div id="msg" class="alert"></div>${body}</main></div>`}

@@ -1,0 +1,1 @@
+const f=document.querySelector('#register');if(f)f.addEventListener('submit',e=>{e.preventDefault();if(document.querySelector('#password').value!==document.querySelector('#confirm').value)return alert('Passwords do not match');sessionStorage.setItem('demoUser',document.querySelector('#username').value);location.href='dashboard.html'});

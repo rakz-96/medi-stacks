@@ -1,0 +1,17 @@
+erDiagram
+ DEPARTMENT ||--o{ DOCTOR : has
+ PATIENT ||--o{ APPOINTMENT : books
+ DOCTOR ||--o{ APPOINTMENT : attends
+ PATIENT ||--o{ BILL : owns
+ APPOINTMENT ||--o| BILL : generates
+ BILL ||--o{ BILL_ITEM : contains
+ HOSPITAL_SERVICE ||--o{ BILL_ITEM : used_in
+ BILL ||--o{ PAYMENT : receives
+ DEPARTMENT { BIGINT department_id PK VARCHAR department_name VARCHAR description }
+ PATIENT { BIGINT patient_id PK VARCHAR full_name DATE date_of_birth VARCHAR gender VARCHAR phone VARCHAR email }
+ DOCTOR { BIGINT doctor_id PK BIGINT department_id FK VARCHAR full_name DECIMAL consultation_fee }
+ APPOINTMENT { BIGINT appointment_id PK BIGINT patient_id FK BIGINT doctor_id FK DATE appointment_date TIME appointment_time VARCHAR status }
+ HOSPITAL_SERVICE { BIGINT service_id PK VARCHAR service_name DECIMAL price BOOLEAN active }
+ BILL { BIGINT bill_id PK BIGINT patient_id FK BIGINT appointment_id FK DECIMAL subtotal DECIMAL tax DECIMAL total_amount VARCHAR status }
+ BILL_ITEM { BIGINT bill_item_id PK BIGINT bill_id FK BIGINT service_id FK INT quantity DECIMAL unit_price DECIMAL amount }
+ PAYMENT { BIGINT payment_id PK BIGINT bill_id FK DECIMAL amount VARCHAR payment_method }

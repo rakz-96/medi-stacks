@@ -1,0 +1,7 @@
+flowchart LR
+ User[Hospital Staff] --> UI[HTML/CSS/JS Frontend]
+ UI --> API[Spring Boot REST API]
+ API --> Service[Service Layer]
+ Service --> Repo[JdbcTemplate Repositories]
+ Repo --> DB[(MySQL hospital_system)]
+ DB --> Repo --> Service --> API --> UI --> User
